@@ -153,9 +153,9 @@ def gh_pages(c):
     """Publish to GitHub Pages"""
     preview(c)
     c.run(
-        "ghp-import -b {github_pages_branch} "
-        "-m {commit_message} "
-        "{deploy_path} -p".format(**CONFIG)
+        'ghp-import -b gh-pages '
+        '-m "Generate Pelican site" '
+        '{deploy_path} -p'.format(**CONFIG)
     )
 
 def pelican_run(cmd):
