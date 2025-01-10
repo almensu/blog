@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://almensu.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://almensu.github.io/blog/theme/pygments/monokai.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://almensu.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://almensu.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://almensu.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333">
+
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="yes" />
+<meta name="description" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考 起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰 …" />
+<meta name="keywords" content="标签1, 标签2">
+
+
+  <meta property="og:site_name" content="yanghoo205"/>
+  <meta property="og:title" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考"/>
+  <meta property="og:description" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考 起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰 …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://almensu.github.io/blog/cong-fan-nao-dao-dun-wu-yi-ge-wen-ben-chu-li-gong-ju-dai-lai-de-fu-za-xing-si-kao.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-03-21 00:00:00+08:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://almensu.github.io/blog/author/yes.html">
+  <meta property="article:section" content="分类"/>
+  <meta property="article:tag" content="标签1"/>
+  <meta property="article:tag" content="标签2"/>
+  <meta property="og:image" content="">
+
+  <title>yanghoo205 &ndash; 从烦恼到顿悟：一个文本处理工具带来的复杂性思考</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="https://almensu.github.io/blog/">
+      <img src="https://almensu.github.io/blog/theme/img/profile.png" alt="YANGHOO205" title="YANGHOO205">
+    </a>
+
+    <h1>
+      <a href="https://almensu.github.io/blog/">YANGHOO205</a>
+    </h1>
+
+    <p>个人博客</p>
+
+
+
+    <ul class="social">
+      <li>
+        <a class="sc-Github"
+           href="https://github.com/almensu"
+           target="_blank">
+          <i class="fa-brands fa-Github"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="https://almensu.github.io/blog/">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="cong-fan-nao-dao-dun-wu-yi-ge-wen-ben-chu-li-gong-ju-dai-lai-de-fu-za-xing-si-kao">从烦恼到顿悟：一个文本处理工具带来的复杂性思考</h1>
+    <p>
+      Posted on 四 21 三月 2024 in <a href="https://almensu.github.io/blog/category/fen-lei.html">分类</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>从烦恼到顿悟：一个文本处理工具带来的复杂性思考</h1>
+<h2>起于困扰</h2>
+<p>作为一名技术写作者，我经常被一个看似简单的问题困扰：记不住专业术语的准确写法。</p>
+<p>在写作过程中，我发现自己总是在重复一些机械性的操作：复制某个术语、搜索之前的文档找到正确写法、确保大小写正确。特别是在处理像"TensorFlow"这样的词时，有时会写成"tensorflow"或"Tensorflow"。这种不一致不仅影响写作效率，更可能导致专业性的质疑。</p>
+<h2>构建自动化工作流</h2>
+<p>为了解决这个困扰，我开始构建一个自动化工具。最初的设计很简单：</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_english_words</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># 1. 优先处理中文中的英文专业术语</span>
+    <span class="n">cn_en_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(?:[，。；！？\s]|^)([A-Z][A-Za-z0-9\s\.]*(?:\s+[A-Z][A-Za-z0-9\s\.]*)*)(?=[，。；！？\s]|$)&#39;</span>
+
+    <span class="c1"># 2. 处理特定产品名称和框架</span>
+    <span class="n">product_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(?:iPhone|MacBook|Visual Studio Code|ChatGPT)&#39;</span>
+    <span class="n">framework_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(?:TensorFlow|PyTorch|React Native)&#39;</span>
+</code></pre></div>
+
+<p>整个工作流程被设计得尽可能简单：</p>
+<ol>
+<li><strong>输入捕获</strong>：使用系统剪贴板作为输入源</li>
+<li><strong>文本分析</strong>：多层正则表达式匹配</li>
+<li><strong>人工审查</strong>：通过临时编辑器确认</li>
+<li><strong>数据持久化</strong>：增量更新词库</li>
+</ol>
+<h2>意外的发现</h2>
+<p>在实现过程中，我遇到了一些有趣的挑战。比如在处理"OpenAI 的 GPT 模型"这样的文本时，最初的设计会将"OpenAI"错误地拆分为"Open"和"AI"。这个问题引发了我的深入思考。</p>
+<h3>1. 完美自动化的迷思</h3>
+<p>起初，我试图用复杂的正则表达式来处理所有可能的情况：</p>
+<div class="highlight"><pre><span></span><code><span class="n">tech_patterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">r</span><span class="s1">&#39;[a-zA-Z]+(?:\.[a-zA-Z]+)+&#39;</span><span class="p">,</span>  <span class="c1"># 如 next.js</span>
+    <span class="sa">r</span><span class="s1">&#39;[A-Z]{2,}(?:\+\+)?&#39;</span><span class="p">,</span>         <span class="c1"># 如 API, C++</span>
+    <span class="sa">r</span><span class="s1">&#39;(?:[A-Za-z]+\d+|\d+[A-Za-z]+)[A-Za-z\d]*&#39;</span>  <span class="c1"># 如 utf8</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<p>但很快我发现，追求完美的自动化反而带来了过度复杂性。最终，我选择了一个看似不够"智能"的方案：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 提供临时编辑器供用户确认</span>
+<span class="n">temp_file</span> <span class="o">=</span> <span class="s1">&#39;/tmp/words_edit.txt&#39;</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;-e&#39;</span><span class="p">,</span> <span class="n">temp_file</span><span class="p">])</span>
+</code></pre></div>
+
+<h3>2. 工具设计的顿悟</h3>
+<p>通过实践，我逐渐形成了几个关键认识：</p>
+<ul>
+<li>
+<p><strong>简单性是最高原则</strong>
+  <code>python
+  # 简单的目录结构
+  ~/script/
+  ├── dir/
+  │   └── tmp.txt          # 词库文件
+  └── extract_words.py     # 主程序</code></p>
+</li>
+<li>
+<p><strong>工作流程的自然性</strong>
+  ```yaml
+  # Espanso 配置示例
+  matches:</p>
+<ul>
+<li>trigger: ":tf"
+  replace: "TensorFlow"
+  ```</li>
+</ul>
+</li>
+</ul>
+<h3>3. 人机协作的艺术</h3>
+<p>最有趣的发现是关于人机协作的本质：</p>
+<ul>
+<li><strong>机器擅长</strong>：</li>
+<li>正则表达式匹配</li>
+<li>保持数据一致性</li>
+<li>
+<p>快速响应</p>
+</li>
+<li>
+<p><strong>人类擅长</strong>：</p>
+</li>
+<li>判断专业术语的完整性</li>
+<li>处理特殊情况</li>
+<li>确保语义准确性</li>
+</ul>
+<h2>复杂性的思考</h2>
+<p>这个项目最终引发了我对复杂性的深入思考。就像鸟群的集体智慧，复杂的行为模式往往源于简单规则的组合：</p>
+<ul>
+<li><strong>鸟群的三个简单规则</strong>：</li>
+<li>与邻近个体保持相同速度</li>
+<li>向群体中心靠拢</li>
+<li>避免与他人碰撞</li>
+</ul>
+<p>这启发我在设计工具时也遵循类似的简单原则：</p>
+<ul>
+<li><strong>工具的核心规则</strong>：</li>
+<li>保持与用户工作流的一致性（剪贴板输入）</li>
+<li>围绕核心需求构建功能（专业术语提取）</li>
+<li>避免功能之间的冲突（优先级处理）</li>
+</ul>
+<h2>更深的理解</h2>
+<p>这个项目让我明白：</p>
+<ol>
+<li>真正的效率来自于对问题本质的理解</li>
+<li>简单规则的组合可以产生优雅的解决方案</li>
+<li>好的工具应该是透明的，像空气一样自然</li>
+</ol>
+<h2>未来的思考</h2>
+<p>这个工具仍在进化，但我的关注点已经从"如何实现完美的自动化"转向了"如何通过简单规则构建优雅的解决方案"。这个转变本身，可能就是复杂性科学给我的最大启示。 </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://almensu.github.io/blog/tag/biao-qian-1.html">标签1</a>
+      <a href="https://almensu.github.io/blog/tag/biao-qian-2.html">标签2</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " yanghoo205 ",
+  "url" : "https://almensu.github.io/blog",
+  "image": "",
+  "description": "分享技术与生活"
+}
+</script>
+</body>
+</html>
