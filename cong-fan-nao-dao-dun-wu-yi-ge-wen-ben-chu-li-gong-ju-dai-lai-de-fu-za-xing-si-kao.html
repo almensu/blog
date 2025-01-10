@@ -45,13 +45,13 @@
  
 
 <meta name="author" content="yes" />
-<meta name="description" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考 起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰 …" />
+<meta name="description" content="起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰：记不住专业术语的准确写法。 在写作过程中，我发现自 …" />
 <meta name="keywords" content="标签1, 标签2">
 
 
   <meta property="og:site_name" content="yanghoo205"/>
   <meta property="og:title" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考"/>
-  <meta property="og:description" content="从烦恼到顿悟：一个文本处理工具带来的复杂性思考 起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰 …"/>
+  <meta property="og:description" content="起于困扰 作为一名技术写作者，我经常被一个看似简单的问题困扰：记不住专业术语的准确写法。 在写作过程中，我发现自 …"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:url" content="https://almensu.github.io/blog/cong-fan-nao-dao-dun-wu-yi-ge-wen-ben-chu-li-gong-ju-dai-lai-de-fu-za-xing-si-kao.html"/>
   <meta property="og:type" content="article"/>
@@ -119,11 +119,10 @@
 
 
   <div>
-    <h1>从烦恼到顿悟：一个文本处理工具带来的复杂性思考</h1>
-<h2>起于困扰</h2>
+    <h3>起于困扰</h3>
 <p>作为一名技术写作者，我经常被一个看似简单的问题困扰：记不住专业术语的准确写法。</p>
 <p>在写作过程中，我发现自己总是在重复一些机械性的操作：复制某个术语、搜索之前的文档找到正确写法、确保大小写正确。特别是在处理像"TensorFlow"这样的词时，有时会写成"tensorflow"或"Tensorflow"。这种不一致不仅影响写作效率，更可能导致专业性的质疑。</p>
-<h2>构建自动化工作流</h2>
+<h3>构建自动化工作流</h3>
 <p>为了解决这个困扰，我开始构建一个自动化工具。最初的设计很简单：</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extract_english_words</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># 1. 优先处理中文中的英文专业术语</span>
@@ -141,9 +140,9 @@
 <li><strong>人工审查</strong>：通过临时编辑器确认</li>
 <li><strong>数据持久化</strong>：增量更新词库</li>
 </ol>
-<h2>意外的发现</h2>
+<h3>意外的发现</h3>
 <p>在实现过程中，我遇到了一些有趣的挑战。比如在处理"OpenAI 的 GPT 模型"这样的文本时，最初的设计会将"OpenAI"错误地拆分为"Open"和"AI"。这个问题引发了我的深入思考。</p>
-<h3>1. 完美自动化的迷思</h3>
+<h4>1. 完美自动化的迷思</h4>
 <p>起初，我试图用复杂的正则表达式来处理所有可能的情况：</p>
 <div class="highlight"><pre><span></span><code><span class="n">tech_patterns</span> <span class="o">=</span> <span class="p">[</span>
     <span class="sa">r</span><span class="s1">&#39;[a-zA-Z]+(?:\.[a-zA-Z]+)+&#39;</span><span class="p">,</span>  <span class="c1"># 如 next.js</span>
@@ -158,7 +157,7 @@
 <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;-e&#39;</span><span class="p">,</span> <span class="n">temp_file</span><span class="p">])</span>
 </code></pre></div>
 
-<h3>2. 工具设计的顿悟</h3>
+<h4>2. 工具设计的顿悟</h4>
 <p>通过实践，我逐渐形成了几个关键认识：</p>
 <ul>
 <li>
@@ -182,7 +181,7 @@
 </ul>
 </li>
 </ul>
-<h3>3. 人机协作的艺术</h3>
+<h4>3. 人机协作的艺术</h4>
 <p>最有趣的发现是关于人机协作的本质：</p>
 <ul>
 <li><strong>机器擅长</strong>：</li>
@@ -198,7 +197,7 @@
 <li>处理特殊情况</li>
 <li>确保语义准确性</li>
 </ul>
-<h2>复杂性的思考</h2>
+<h3>复杂性的思考</h3>
 <p>这个项目最终引发了我对复杂性的深入思考。就像鸟群的集体智慧，复杂的行为模式往往源于简单规则的组合：</p>
 <ul>
 <li><strong>鸟群的三个简单规则</strong>：</li>
@@ -213,14 +212,14 @@
 <li>围绕核心需求构建功能（专业术语提取）</li>
 <li>避免功能之间的冲突（优先级处理）</li>
 </ul>
-<h2>更深的理解</h2>
+<h3>更深的理解</h3>
 <p>这个项目让我明白：</p>
 <ol>
 <li>真正的效率来自于对问题本质的理解</li>
 <li>简单规则的组合可以产生优雅的解决方案</li>
 <li>好的工具应该是透明的，像空气一样自然</li>
 </ol>
-<h2>未来的思考</h2>
+<h3>未来的思考</h3>
 <p>这个工具仍在进化，但我的关注点已经从"如何实现完美的自动化"转向了"如何通过简单规则构建优雅的解决方案"。这个转变本身，可能就是复杂性科学给我的最大启示。 </p>
   </div>
   <div class="tag-cloud">
